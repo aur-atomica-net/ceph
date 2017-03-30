@@ -51,7 +51,7 @@ optdepends=(
 options=('!emptydirs')
 source=("https://download.ceph.com/tarballs/ceph-$pkgver.tar.gz"
         'ceph.sysusers')
-sha256sums=('a0957b17a661960de329884d439b38d4ca7edd1e87a9d408268017f438e5fb7b'
+sha256sums=('ac0fa6be2343ddaa1ada6bab2e77fae682fde15f0dad25748dfcfdd4713cedd5'
             '69c5c1888c7f712b80e1f6b607f747a251a4f27734777721e8332e15f6bce785')
 
 
