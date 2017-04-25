@@ -1,7 +1,7 @@
 # Maintainer: Jason R. McNeil <jason@jasonrm.net>
 
 pkgname=ceph
-pkgver=12.0.1
+pkgver=12.0.2
 pkgrel=1
 pkgdesc='Distributed, fault-tolerant storage platform delivering object, block, and file system'
 arch=('x86_64')
@@ -30,6 +30,7 @@ depends=(
   'gcc-libs'
   'glibc'
   'gperftools'
+  'jemalloc'
   'keyutils'
   'leveldb'
   'libaio'
@@ -51,7 +52,7 @@ optdepends=(
 options=('!emptydirs')
 source=("https://download.ceph.com/tarballs/ceph-$pkgver.tar.gz"
         'ceph.sysusers')
-sha256sums=('ac0fa6be2343ddaa1ada6bab2e77fae682fde15f0dad25748dfcfdd4713cedd5'
+sha256sums=('24bc41456dcad38bc8eb5c1dba4af7b7da1062f296e7e2094a1109b5c4013b51'
             '69c5c1888c7f712b80e1f6b607f747a251a4f27734777721e8332e15f6bce785')
 
 
@@ -61,6 +62,7 @@ build() {
   cd build
   # list of options defaults: grep ^option CMakeLists.txt
   cmake \
+    -DALLOCATOR=jemalloc \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
     -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib \
     -DCMAKE_INSTALL_PREFIX=/usr \
