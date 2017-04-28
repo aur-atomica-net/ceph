@@ -40,6 +40,7 @@ depends=(
   'libutil-linux'
   'ncurses'
   'nss'
+  'parted'
   'python2'
   'python-setuptools'
   'python2-setuptools'
