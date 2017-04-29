@@ -2,7 +2,7 @@
 
 pkgname=ceph
 pkgver=12.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Distributed, fault-tolerant storage platform delivering object, block, and file system'
 arch=('x86_64')
 url='https://ceph.com/'
@@ -93,7 +93,7 @@ package() {
   install -Dm644 "$srcdir"/ceph.sysusers usr/lib/sysusers.d/$pkgname.conf
 
   install -d -m 755 usr/lib/udev/rules.d
-  cp "$srcdir"/udev/* usr/lib/udev/rules.d/
+  cp "$srcdir"/$pkgname-$pkgver/udev/* usr/lib/udev/rules.d/
 
   # fix sbin path
   msg2 'Fix sbin paths'
