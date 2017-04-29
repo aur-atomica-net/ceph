@@ -88,11 +88,12 @@ package() {
 
   cd "$pkgdir"
 
-  # install tmpfiles.d
-  install -Dm644 "$srcdir"/$pkgname-$pkgver/systemd/ceph.tmpfiles.d \
-    usr/lib/tmpfiles.d/$pkgname.conf
-  install -Dm644 "$srcdir"/ceph.sysusers \
-    usr/lib/sysusers.d/$pkgname.conf
+  install -Dm644 "$srcdir"/$pkgname-$pkgver/systemd/ceph.tmpfiles.d usr/lib/tmpfiles.d/$pkgname.conf
+
+  install -Dm644 "$srcdir"/ceph.sysusers usr/lib/sysusers.d/$pkgname.conf
+
+  install -d -m 755 usr/lib/udev/rules.d
+  cp "$srcdir"/udev/* usr/lib/udev/rules.d/
 
   # fix sbin path
   msg2 'Fix sbin paths'
