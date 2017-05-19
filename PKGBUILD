@@ -44,7 +44,7 @@ depends=(
   'python2'
   'python-setuptools'
   'python2-setuptools'
-  'python-prettytable'
+  'python2-prettytable'
   'snappy'
 )
 optdepends=(
