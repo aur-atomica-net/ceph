@@ -2,7 +2,7 @@
 
 pkgname=ceph
 pkgver=12.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Distributed, fault-tolerant storage platform delivering object, block, and file system'
 arch=('x86_64')
 url='https://ceph.com/'
@@ -44,6 +44,7 @@ depends=(
   'python2'
   'python-setuptools'
   'python2-setuptools'
+  'python-prettytable'
   'snappy'
 )
 optdepends=(
