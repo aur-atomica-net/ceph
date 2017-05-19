@@ -2,7 +2,7 @@
 
 pkgname=ceph
 pkgver=12.0.3
-pkgrel=2
+pkgrel=3
 pkgdesc='Distributed, fault-tolerant storage platform delivering object, block, and file system'
 arch=('x86_64')
 url='https://ceph.com/'
@@ -64,7 +64,6 @@ build() {
   cd build
   # list of options defaults: grep ^option CMakeLists.txt
   cmake \
-    -DALLOCATOR=jemalloc \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib \
     -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib \
     -DCMAKE_INSTALL_PREFIX=/usr \
