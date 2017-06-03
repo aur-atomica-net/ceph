@@ -2,7 +2,7 @@
 
 pkgname=ceph
 pkgver=12.0.3
-pkgrel=3
+pkgrel=4
 pkgdesc='Distributed, fault-tolerant storage platform delivering object, block, and file system'
 arch=('x86_64')
 url='https://ceph.com/'
@@ -77,6 +77,7 @@ build() {
     -DWITH_SYSTEM_BOOST=ON \
     -DWITH_SYSTEMD=ON \
     -DWITH_TESTS=ON \
+    -DWITH_SSE42=OFF \
     ..
   make
 }
