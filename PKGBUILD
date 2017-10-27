@@ -69,7 +69,7 @@ build() {
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_SBINDIR=/usr/bin \
     -DCMAKE_INSTALL_SYSCONFDIR=/etc \
-    -DHAVE_BABELTRACE=OFF \
+    -DWITH_BABELTRACE=OFF \
     -DWITH_EMBEDDED=OFF \
     -DWITH_LTTNG=OFF \
     -DWITH_OPENLDAP=OFF \
@@ -77,7 +77,6 @@ build() {
     -DWITH_SYSTEM_BOOST=ON \
     -DWITH_SYSTEMD=ON \
     -DWITH_TESTS=ON \
-    -DWITH_SSE42=OFF \
     ..
   make
 }
