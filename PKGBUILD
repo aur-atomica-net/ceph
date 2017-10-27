@@ -1,8 +1,8 @@
 # Maintainer: Jason R. McNeil <jason@jasonrm.net>
 
 pkgname=ceph
-pkgver=12.0.3
-pkgrel=4
+pkgver=12.2.1
+pkgrel=1
 pkgdesc='Distributed, fault-tolerant storage platform delivering object, block, and file system'
 arch=('x86_64')
 url='https://ceph.com/'
@@ -54,7 +54,7 @@ optdepends=(
 options=('!emptydirs')
 source=("https://download.ceph.com/tarballs/ceph-$pkgver.tar.gz"
         'ceph.sysusers')
-sha256sums=('b0f2655c826bcba12c25828a8434f4e3d4cfdf41b5f59999da54132b96521de7'
+sha256sums=('512666ee88610640d66b261f9307c96ccd70eb25cd3349acd083fb1220c8a32e'
             '69c5c1888c7f712b80e1f6b607f747a251a4f27734777721e8332e15f6bce785')
 
 
